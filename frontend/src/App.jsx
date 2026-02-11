@@ -98,7 +98,7 @@ const Navbar = ({ isDarkMode, toggleTheme, reset, status }) => (
           <ShieldCheck className="w-5 h-5 text-white" />
         </div>
         <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300">
-          LegaLens
+          LegalLens
         </span>
       </div>
 
@@ -480,7 +480,7 @@ export default function App() {
 
     try {
       // Connects to local Flask backend
-      const response = await fetch('http://legalens-cc1a.onreader.com/analyze', {
+      const response = await fetch(import.meta.env.VITE_API_URL, {
         method: 'POST',
         body: formData,
       });

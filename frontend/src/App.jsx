@@ -480,7 +480,7 @@ export default function App() {
 
     try {
       // Connects to local Flask backend
-      const response = await fetch('http://127.0.0.1:5000/analyze', {
+      const response = await fetch('http://legalens-cc1a.onreader.com/analyze', {
         method: 'POST',
         body: formData,
       });
